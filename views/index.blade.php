@@ -177,7 +177,8 @@
                 });
             })
 
-            
+            {{!! (Session::get('msg') == 'success') ? 'toastr.success("Success");' : '' !!}}
+            {{!! (Session::get('msg') == 'error') ? 'toastr.error("Something went wrong");' : '' !!}}
         });
     </script>
 @endsection
